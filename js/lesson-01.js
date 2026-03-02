@@ -105,30 +105,45 @@
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
 
-function isAdult(age) {
-  if (age >= 18) {
-    return true;
-  } else {
-    return confirm('немає 18 років');
-  }
-}
-console.log(isAdult(14));
-// Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
-// Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
-// якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
-// якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
-function fizzBuzz(num) {
-  for (let i = 1; i <= num; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log('fizzbuzz');
-    } else if (i % 3 === 0) {
-      console.log('fizz');
-    } else if (i % 5 === 0) {
-      console.log('buzz');
-    } else {
-      console.log(i);
-    }
-  }
-}
+// function isAdult(age) {
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     return confirm('немає 18 років');
+//   }
+// }
+// console.log(isAdult(14));
+// // Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
+// // Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
+// // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
+// // якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+// function fizzBuzz(num) {
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log('fizzbuzz');
+//     } else if (i % 3 === 0) {
+//       console.log('fizz');
+//     } else if (i % 5 === 0) {
+//       console.log('buzz');
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
 
-fizzBuzz(15);
+// fizzBuzz(15);
+
+// function getExtremeElements(array) {
+//   const firstElement = array[0];
+//   const lastElement = array[array.length - 1];
+
+//   return [firstElement, lastElement];
+// }
+// console.log(getExtremeElements(['Earth', 'Mars', 'Venus']));
+
+function getLength(array) {
+  const str = array.join('');
+  const strSymbol = str.length;
+  return strSymbol;
+}
+console.log(getLength(['Mango', 'hurries', 'to', 'the', 'train']));
