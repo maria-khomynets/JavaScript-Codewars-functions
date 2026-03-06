@@ -82,3 +82,69 @@
 //   trunk += '|';
 //   console.log(trunk);
 // }
+
+//  function solution(str) {
+//   const strin = str.split('');
+//      for (i = strin.length; i > 1; i--) {
+
+//      }
+//  }
+
+//  console.log(solution('gggdgds'));
+
+// function smash (words) {
+
+//    return words.trim().join(" ")
+
+// function lovefunc(flower1, flower2) {
+//   if (
+//     (flower1 % 2 === 0 && flower2 % 2 !== 0) ||
+//     (flower2 % 2 === 0 && flower2 % 1 !== 0)
+//   ) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+//
+// function feast(beast, dish) {
+//   const a = beast.split('');
+//   const b = dish.split('');
+//   console.log(a);
+//   console.log(b);
+// }
+
+// function doubleChar(str) {
+//   let a = '';
+//   for (i = 1; i <= str.length; i++) {
+//     str[0] + str[0];
+//     a += str[i];
+//   }
+//   return a;
+// }
+
+// function removeEveryOther(arr) {
+//   for (i = 0; i < arr.length - 1; i++) {
+//     if (i % 2 !== 0) {
+//       return arr.push(i);
+//     }
+//   }
+// }
+// function reverseList(list) {
+//   let arr = [];
+//   for (i = list.length - 1; i > 0; i--) {
+//     arr.push(arr[i]);
+//   }
+//   return arr;
+// }
+// function positiveSum(arr) {
+//   let sum = 0
+//    for (i = 0; i < arr.length - 1; i++) {
+//       if (arr[i] >= 0) {
+//          sum += arr[i];
+//       }  return sum
+//    }
+
+// }
+console.log('ghbdsn');
