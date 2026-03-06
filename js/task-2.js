@@ -11,12 +11,13 @@
  */
 
 function logItems(arr) {
+  let ar = [];
   for (let i = 0; i < arr.length; i++) {
     console.log(`${i + 1} - ${arr[i]}`);
   }
 }
 
-logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+console.log(logItems(['🍎', '🍇', '🍑', '🍌', '🍋']));
 logItems(['Mango', 'Poly', 'Ajax']);
 
 /**
@@ -28,20 +29,18 @@ logItems(['Mango', 'Poly', 'Ajax']);
  * гарантовано однакова.
  */
 
-// const names = "Jacob..."  phones = "89001234567.."
 // function printInfo(names, phones) {
-//     const namesArr = names.split(",");
-//     const phonesArr = phones.split(",");
+//   const name = names.split(',');
+//   const phone = phones.split(',');
 
-//     for(let i = 0; i < namesArr.length; i++) {
-//         console.log(namesArr[i], phonesArr[i]);
-//     }
+//   for (let i = 0; i < name.length; i++) {
+//     console.log(name[i], phone[i]);
+//   }
 // }
-
 // printInfo(
-//     "Jacob,William,Solomon,Artemis",
-//     "89001234567,89001112233,890055566377,890055566300"
-//   );
+//   'Jacob,William,Solomon,Artemis',
+//   '89001234567,89001112233,890055566377,890055566300'
+// );
 
 /**
  * Напиши функцію formatTime(totalMinutes) яка переведе значення
@@ -49,16 +48,14 @@ logItems(['Mango', 'Poly', 'Ajax']);
  * та хвилин HH:MM.
  */
 
-// function formatTime(totalMinutes) {
-//     const hours = Math.floor(totalMinutes / 60);
-//     const minutes = totalMinutes % 60;
-
-//     const doubleHours = String(hours).padStart(2, 0);
-//     const doubleMinutes = String(minutes).padStart(2, 0);
-
-//     return `${doubleHours}:${doubleMinutes}`
-// }
-
-// console.log(formatTime(70))  // 1:10
-// console.log(formatTime(460))
-// console.log(formatTime(1441))
+function formatTime(totalMinutes) {
+  const hours = Math.floor(totalMinutes / 60);
+  const minute = totalMinutes % 60;
+  console.log(hours);
+  console.log(minute);
+  console.log(`${hours}:${minute}`);
+}
+formatTime(70);
+// console.log(formatTime(70)); // 1:10
+// console.log(formatTime(460));
+// console.log(formatTime(1441));

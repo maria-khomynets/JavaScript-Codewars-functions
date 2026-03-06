@@ -148,16 +148,16 @@
 // }
 // console.log(getLength(['Mango', 'hurries', 'to', 'the', 'train']));
 
-const planets = ['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'];
-console.log(planets.slice(3, -1)); // ["Jupiter", "Saturn"]
+// const planets = ['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'];
+// console.log(planets.slice(3, -1)); // ["Jupiter", "Saturn"]
 
-function getSlice(array, value) {
-  const ind = array.indexOf(value);
-  const aray = array.slice(0, ind + 1);
-  if (ind !== -1) {
-    return aray;
-  } else {
-    return [];
-  }
-}
-console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Pfoly'));
+// function getSlice(array, value) {
+//   const ind = array.indexOf(value);
+//   const aray = array.slice(0, ind + 1);
+//   if (ind !== -1) {
+//     return aray;
+//   } else {
+//     return [];
+//   }
+// }
+// console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Pfoly'));
