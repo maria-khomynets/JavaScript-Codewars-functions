@@ -1,20 +1,3 @@
-function calculateTotalPrice(productName) {
-  const products = [
-    { name: 'Radar', price: 1300, quantity: 4 },
-    { name: 'Scanner', price: 2700, quantity: 3 },
-    { name: 'Droid', price: 400, quantity: 7 },
-    { name: 'Grip', price: 1200, quantity: 9 },
-  ];
-
-  for (const product of products) {
-    if (productName === product.name) {
-      return product.price * product.quantity;
-    }
-  }
-  return `Product ${productName} not found!`;
-}
-console.log(calculateTotalPrice('Scanner'));
-
 function назваФункції(аргумент) {
   // 1. "Що я маю отримати в кінці?"
   // (Масив значень? Число-суму? Один об'єкт?)
@@ -33,10 +16,18 @@ function назваФункції(аргумент) {
   // -> Пишемо: return result;
 }
 
-// Функція calculateTotalPrice(productName) приймає один параметр productName - назва товару.
-// Функція містить масив об'єктів products з такими властивостями, як name — ім'я товару, price — ціна і quantity — кількість.
+// Задача 1: Розрахунок вартості всього складу
+// Тут ми поєднуємо пошук та математику. Тобі потрібно порахувати загальну вартість усіх товарів (ціна помножена на кількість).
+const products = [];
 
-// Доповни код функції так, щоб вона повертала загальну вартість (ціна * кількість) товару з таким ім'ям з масиву products.
-
-// Якщо продукту з такою назвою немає, то функція повинна повертати рядок "Product <productName> not found!",
-//   де < productName > — це ім'я товару.
+// Умова: Напиши функцію calculateTotalPrice(products), яка отримує масив об'єктів і повертає загальну суму вартості всіх товарів.
+function calculateTotalPrice(products) {
+  let total = 0;
+  for (const item of products) {
+    console.log(item.price * item.quantity);
+    total += item.price * item.quantity;
+  }
+  console.log(total);
+  return total;
+}
+calculateTotalPrice(products);
