@@ -16,18 +16,24 @@ function назваФункції(аргумент) {
   // -> Пишемо: return result;
 }
 
-// Задача 1: Розрахунок вартості всього складу
-// Тут ми поєднуємо пошук та математику. Тобі потрібно порахувати загальну вартість усіх товарів (ціна помножена на кількість).
-const products = [];
+// Умова: Напиши функцію calculateLowStockValue(products, threshold).
+//  Вона має додати до загальної вартості лише ті товари, у яких quantity менше за threshold.
+//
+const warehouse = [
+  { name: 'Monitor', price: 5000, quantity: 2 }, // Додаємо (5000 * 2)
+  { name: 'Mouse', price: 300, quantity: 10 }, // Пропускаємо (багато на складі)
+  { name: 'Keyboard', price: 800, quantity: 3 }, // Додаємо (800 * 3)
+];
 
-// Умова: Напиши функцію calculateTotalPrice(products), яка отримує масив об'єктів і повертає загальну суму вартості всіх товарів.
-function calculateTotalPrice(products) {
+// Виклик: calculateLowStockValue(warehouse, 5)
+//Очікуваний результат: 12400
+function calculateLowStockValue(products, threshold) {
   let total = 0;
   for (const item of products) {
-    console.log(item.price * item.quantity);
-    total += item.price * item.quantity;
+    if (threshold > item.quantity) {
+      total += item.price * item.quantity;
+    }
   }
   console.log(total);
-  return total;
 }
-calculateTotalPrice(products);
+calculateLowStockValue(warehouse, 5);
