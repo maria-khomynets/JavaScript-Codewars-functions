@@ -16,24 +16,24 @@ function назваФункції(аргумент) {
   // -> Пишемо: return result;
 }
 
-// Умова: Напиши функцію calculateLowStockValue(products, threshold).
-//  Вона має додати до загальної вартості лише ті товари, у яких quantity менше за threshold.
+// Умова: Напиши функцію getMostExpensiveProduct(products).
+// Вона має пройтися по масиву і повернути весь об'єкт товару, у якого найвища ціна.
 //
-const warehouse = [
-  { name: 'Monitor', price: 5000, quantity: 2 }, // Додаємо (5000 * 2)
-  { name: 'Mouse', price: 300, quantity: 10 }, // Пропускаємо (багато на складі)
-  { name: 'Keyboard', price: 800, quantity: 3 }, // Додаємо (800 * 3)
-];
+//
 
-// Виклик: calculateLowStockValue(warehouse, 5)
-//Очікуваний результат: 12400
-function calculateLowStockValue(products, threshold) {
-  let total = 0;
+const store = [
+  { name: 'Laptop', price: 30000 },
+  { name: 'Smartphone', price: 150000 },
+  { name: 'Tablet', price: 20000 },
+];
+function getMostExpensiveProduct(products) {
+  let result = products[0];
+
   for (const item of products) {
-    if (threshold > item.quantity) {
-      total += item.price * item.quantity;
+    if (item.price > result.price) {
+      result = item;
     }
   }
-  console.log(total);
+  return result;
 }
-calculateLowStockValue(warehouse, 5);
+console.log(getMostExpensiveProduct(store));
