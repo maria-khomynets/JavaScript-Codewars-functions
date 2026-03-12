@@ -15,34 +15,37 @@
 // 5. "Я не забув віддати те, що зібрав?"
 // -> Пишемо: return result;
 
-// Умова: Напиши функцію getCheapestAvailableProduct(products).
-// Вона має повернути об'єкт товару, який має найменшу ціну, але при цьому його кількість (quantity) більша за 0.
-const stock = [
-  { name: 'Case', price: 200, quantity: 0 },
-  { name: 'Fan', price: 500, quantity: 5 },
-  { name: 'Cable', price: 300, quantity: 0 },
-  { name: 'Power Bank', price: 1200, quantity: 2 },
+// Умова: Напиши функцію getLongestMessageByAuthor(messages, authorName).
+// Вона має знайти всі повідомлення автора authorName і серед них повернути те,
+//     у якого текст(text) має найбільшу довжину(.length).
+
+const chat = [
+  { author: 'Mango', text: 'Hello!' },
+  { author: 'Poly', text: 'I agree!' },
+  { author: 'Mango', text: 'I am learning JavaScript, it is awesome!' },
+  { author: 'Poly', text: 'Hi there, how are you?' },
 ];
 
-function getCheapestAvailableProduct(products) {
-  let minProduct = {};
-
-  for (const product of products) {
-    const min = minProduct.price;
-    if (min === undefined) {
-      if (product.quantity > 0) {
-        minProduct = product;
-      }
-    }
-    if (min > product.price && product.quantity > 0) {
-      minProduct = product;
+function getLongestMessageByAuthor(messages, authorName) {
+  let result = {};
+  let messagesByAutor = [];
+  //крок 1 зробити новий масив з заданим автором
+  for (const iteMmessages of messages) {
+    if (authorName === iteMmessages.author) {
+      messagesByAutor.push(iteMmessages);
     }
   }
-  return minProduct;
+  console.log(messagesByAutor);
+  //крок 2 знайти в кого найбільше повідомлення
+  let min = messagesByAutor[0];
+  for (const itemAutor of messagesByAutor) {
+    if (min.text.length < itemAutor.text.length) {
+      min = itemAutor;
+    }
+  }
+  console.log(min);
 }
-console.log(getCheapestAvailableProduct(stock));
+const result = getLongestMessageByAuthor(chat, 'Poly');
+console.log('>>>function result:::', result);
 
-// const result = getCheapestAvailableProduct(stock);
-// console.log('>>>function result:::', result);
-
-// Очікуваний результат: { name: 'Fan', price: 500, quantity: 5 }
+// Очікуваний результат: { author: 'Poly', text: 'Hi there, how are you?' }
