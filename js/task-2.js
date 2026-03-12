@@ -15,37 +15,27 @@
 // 5. "Я не забув віддати те, що зібрав?"
 // -> Пишемо: return result;
 
-// Умова: Напиши функцію getLongestMessageByAuthor(messages, authorName).
-// Вона має знайти всі повідомлення автора authorName і серед них повернути те,
-//     у якого текст(text) має найбільшу довжину(.length).
-
-const chat = [
-  { author: 'Mango', text: 'Hello!' },
-  { author: 'Poly', text: 'I agree!' },
-  { author: 'Mango', text: 'I am learning JavaScript, it is awesome!' },
-  { author: 'Poly', text: 'Hi there, how are you?' },
+// У нас є масив транзакцій, де кожна має тип: 'income' (дохід) або 'expense' (витрата).
+//     Умова: Напиши функцію calculateBalance(transactions).
+// Вона має порахувати фінальний баланс: доходи додаємо, витрати віднімаємо.
+const history = [
+  { amount: 1000, type: 'income' },
+  { amount: 200, type: 'expense' },
+  { amount: 500, type: 'income' },
+  { amount: 400, type: 'expense' },
 ];
-
-function getLongestMessageByAuthor(messages, authorName) {
-  let result = {};
-  let messagesByAutor = [];
-  //крок 1 зробити новий масив з заданим автором
-  for (const iteMmessages of messages) {
-    if (authorName === iteMmessages.author) {
-      messagesByAutor.push(iteMmessages);
+function calculateBalance(transactions) {
+  let total = 0;
+  for (const item of transactions) {
+    if (item.type === 'income') {
+      total += item.amount;
+    }
+    if (item.type === 'expense') {
+      total -= item.amount;
     }
   }
-  console.log(messagesByAutor);
-  //крок 2 знайти в кого найбільше повідомлення
-  let min = messagesByAutor[0];
-  for (const itemAutor of messagesByAutor) {
-    if (min.text.length < itemAutor.text.length) {
-      min = itemAutor;
-    }
-  }
-  console.log(min);
+  console.log(total);
 }
-const result = getLongestMessageByAuthor(chat, 'Poly');
-console.log('>>>function result:::', result);
 
-// Очікуваний результат: { author: 'Poly', text: 'Hi there, how are you?' }
+const result = calculateBalance(history);
+console.log('>>>function result:::', result);
