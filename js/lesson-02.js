@@ -117,16 +117,75 @@ const logins = ['Peter', 'John', 'Igor', 'Sasha'];
 
 //const numbers = [12, 5, 35, '56', 12, 24, 7, 80, '3'];
 
-function findSmallestNumber(numbers) {
-  if (!Array.isArray(numbers)) {
-    return 'Sory, it is not an array!';
-  }
-  let min = numbers[0];
-  for (let i = 0; i < numbers.length; i++) {
-    if (min > numbers[i]) {
-      min = numbers[i];
-    }
-  }
-  console.log(min);
-}
-findSmallestNumber(logins);
+// function findSmallestNumber(numbers) {
+//   if (!Array.isArray(numbers)) {
+//     return 'Sory, it is not an array!';
+//   }
+//   let min = numbers[0];
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (min > numbers[i]) {
+//       min = numbers[i];
+//     }
+//   }
+//   console.log(min);
+// }
+// findSmallestNumber(logins);
+
+// Напишіть функцію findLongestWord(string), яка
+// приймає довільний рядок, що складається лише зі слів, розділених
+// пробілами (параметр string), і повертатиме найдовше слово у реченні.
+
+// function findLongestWord(string) {
+//   const arr = string.split(' ');
+//   console.log(arr);
+//   let long = arr[0];
+
+//   for (const item of arr) {
+//     if (item.length > long.length) {
+//       long = item;
+//     }
+//   }
+//   return long;
+// }
+// console.log(findLongestWord('London is the capital of Great Britain')); // 'capital'
+
+// Є об'єкт, в якому зберігаються зарплати команди
+// Напишіть код для додавання усіх зарплат та
+// збережіть його результат в змінній sum.
+// Якщо об'єкт salaries пустий, то результат має бути 0
+
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+// function sal(obj) {
+//   if (Object.keys(obj).length === 0) {
+//     return 0;
+//   }
+//   let total = 0;
+//   for (const item in obj) {
+//     total += obj[item];
+//   }
+//   console.log(total);
+// }
+// sal(salaries);
+
+// Напишіть функцію calcTotalPrice(fruits, fruitName),
+// яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
+// Функція рахує і повертає загальну вартість фрукта
+// з таким ім'ям, ціною та кількістю з об'єкта.
+
+// Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
+// назвою фрукта, це також треба урахувати.
+
+const fruits = [
+  { name: 'Яблуко', price: 45, quantity: 7 },
+  { name: 'Апельсин', price: 60, quantity: 4 },
+  { name: 'Банан', price: 125, quantity: 8 },
+  { name: 'Груша', price: 350, quantity: 2 },
+  { name: 'Виноград', price: 440, quantity: 3 },
+  { name: 'Банан', price: 125, quantity: 3 },
+];
+
+function calcTotalPrice(fruits, fruitName) {}
