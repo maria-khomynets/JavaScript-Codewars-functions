@@ -7,7 +7,7 @@
 // "<номер елемента> - <значення елемента>".
 // Використайте цикл for для перебору елементів масиву.
 // Нумерація елементів повинна починатися з 1 (а не з 0).
-//const styles = ['jazz', 'blues'];
+// const styles = ['jazz', 'blues'];
 // styles.push('rock-n-roll');
 
 // for (let i = 0; i < styles.length; i++) {
@@ -53,7 +53,7 @@
 
 // checkLogin(logins);
 
-const logins = ['Peter', 'John', 'Igor', 'Sasha'];
+//const logins = ['Peter', 'John', 'Igor', 'Sasha'];
 
 // function checkLogin(array) {
 //   const name = prompt("Введіть ваше ім'я");
@@ -88,6 +88,8 @@ const logins = ['Peter', 'John', 'Igor', 'Sasha'];
 //   }
 //   return total / arguments.length;
 // }
+
+
 // console.log(caclculateAverage(1, 'a', 3, 45, 6));
 
 // Напишіть функцію, яка сумуватиме сусідні числа
@@ -171,6 +173,15 @@ const logins = ['Peter', 'John', 'Igor', 'Sasha'];
 // }
 // sal(salaries);
 
+// Створіть об'єкт calculator з наступними методами:
+// read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
+// sum() - повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті),
+// mult() - перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті),
+// винесіть перевірку на наявність властивостей в об'єкті в окремий метод exist().
+
+// Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
+// методи sum і mult мають повертати рядок 'No such propeties'
+
 // Напишіть функцію calcTotalPrice(fruits, fruitName),
 // яка приймає массив об'єктів (fruits) і рядок з назвою фрукта (fruitName).
 // Функція рахує і повертає загальну вартість фрукта
@@ -179,13 +190,37 @@ const logins = ['Peter', 'John', 'Igor', 'Sasha'];
 // Зверніть увагу, що в масиві може бути кілька обʼєктів з однаковою
 // назвою фрукта, це також треба урахувати.
 
-const fruits = [
-  { name: 'Яблуко', price: 45, quantity: 7 },
-  { name: 'Апельсин', price: 60, quantity: 4 },
-  { name: 'Банан', price: 125, quantity: 8 },
-  { name: 'Груша', price: 350, quantity: 2 },
-  { name: 'Виноград', price: 440, quantity: 3 },
-  { name: 'Банан', price: 125, quantity: 3 },
-];
+// const fruits = [
+//   { name: 'Яблуко', price: 45, quantity: 7 },
+//   { name: 'Апельсин', price: 60, quantity: 4 },
+//   { name: 'Банан', price: 125, quantity: 8 },
+//   { name: 'Груша', price: 350, quantity: 2 },
+//   { name: 'Виноград', price: 440, quantity: 3 },
+//   { name: 'Банан', price: 125, quantity: 3 },
+// ];
 
-function calcTotalPrice(fruits, fruitName) {}
+// function calcTotalPrice(fruits, fruitName) {
+//   let totalPrice = 0;
+
+//   for (let element of fruits) {
+//     if (fruitName === element.name) {
+//       totalPrice += element.price * element.quantity;
+//     }
+//   }
+//   if (totalPrice === 0) {
+//     return `Product ${fruitName} not found!`;
+//   }
+//   return totalPrice;
+// }
+// console.log(calcTotalPrice(fruits, 'Банан'));
+
+
+function addOverNum(value, ...args) {
+  let sum = 0;
+    for(const arg of args){
+   if(arg > value){
+    sum += arg 
+   }
+  }
+  return sum
+}
