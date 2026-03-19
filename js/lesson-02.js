@@ -215,12 +215,9 @@
 // console.log(calcTotalPrice(fruits, 'Банан'));
 
 
-function addOverNum(value, ...args) {
-  let sum = 0;
-    for(const arg of args){
-   if(arg > value){
-    sum += arg 
-   }
+function getExtremeScores(scores) {
+  return {
+  best: (Math.max(...scores))
+worst: (Math.min(...scores))
   }
-  return sum
 }
