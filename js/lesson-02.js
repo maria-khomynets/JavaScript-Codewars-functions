@@ -89,7 +89,6 @@
 //   return total / arguments.length;
 // }
 
-
 // console.log(caclculateAverage(1, 'a', 3, 45, 6));
 
 // Напишіть функцію, яка сумуватиме сусідні числа
@@ -214,10 +213,26 @@
 // }
 // console.log(calcTotalPrice(fruits, 'Банан'));
 
+// function getExtremeScores(scores) {
+//   return {
+//   best: (Math.max(...scores))
+// worst: (Math.min(...scores))
+//   }
+// }
 
-function getExtremeScores(scores) {
-  return {
-  best: (Math.max(...scores))
-worst: (Math.min(...scores))
-  }
-}
+const pizzaPalace = {
+  pizzas: ['Supercheese', 'Smoked', 'Four meats'],
+  checkPizza(pizzaName) {
+    return pizzas.includes(pizzaName);
+  },
+  order(pizzaName) {
+    const isPizzaAvailable = checkPizza(pizzaName);
+
+    if (!isPizzaAvailable) {
+      return `Sorry, there is no pizza named «${pizzaName}»`;
+    }
+
+    return `Order accepted, preparing «${pizzaName}» pizza`;
+  },
+};
+console.log(pizzaPalace.order('Smoked'));
