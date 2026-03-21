@@ -224,9 +224,11 @@ const bear = {
   name: 'Бобо',
   name2: 'Бобо2',
   sayName() {
-    console.log(this.name + this.name2);
+    console.log(this.name);
+    console.log(this.name2);
   },
 };
 
-bear.sayName();
-bear.name;
+bear.sayName;
+const a = bear.sayName;
+a();
