@@ -219,5 +219,3 @@
 // worst: (Math.min(...scores))
 //   }
 // }
-
-console;
