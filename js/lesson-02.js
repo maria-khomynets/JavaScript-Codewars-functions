@@ -251,7 +251,3 @@ const hotel = {
     console.log('this in showThis: ', this);
   },
 };
-
-hotel.showThis();
-// this in foo: {username: 'Resort hotel', showThis: ƒ}
-// this in showThis: {username: 'Resort hotel',showThis: ƒ}
