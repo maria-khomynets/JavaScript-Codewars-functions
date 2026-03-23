@@ -219,36 +219,3 @@
 // worst: (Math.min(...scores))
 //   }
 // }
-
-const bear = {
-  name: 'Бобо',
-  name2: 'Бобо2',
-  sayName() {
-    console.log(this.name);
-    console.log(this.name2);
-  },
-
-  sayName2() {
-    console.log(this.name);
-    console.log(this.name2);
-  },
-};
-
-// bear.sayName();
-// const a = bear.sayName;
-// console.log(this);
-// bear.sayName2;
-// const s = bear.sayName2;
-// console.log(s);
-const parent = {
-  name: 'Stacey',
-  surname: 'Moore',
-  age: 54,
-  heritage: 'Irish',
-};
-
-const child = Object.create(parent);
-child.name = 'Jason';
-child.age = 27;
-console.log(child);
-console.log(parent);
