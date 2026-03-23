@@ -240,14 +240,12 @@ const bear = {
 // bear.sayName2;
 // const s = bear.sayName2;
 // console.log(s);
-const hotel = {
-  username: 'Resort hotel',
-  showThis() {
-    const foo = () => {
-      console.log('this in foo: ', this);
-    };
-
-    foo();
-    console.log('this in showThis: ', this);
-  },
+const a = () => {
+  console.log(this);
 };
+
+function b() {
+  a();
+}
+
+b.call({ user: 'Mango' });
