@@ -240,12 +240,15 @@ const bear = {
 // bear.sayName2;
 // const s = bear.sayName2;
 // console.log(s);
-const a = () => {
-  console.log(this);
+const parent = {
+  name: 'Stacey',
+  surname: 'Moore',
+  age: 54,
+  heritage: 'Irish',
 };
 
-function b() {
-  a();
-}
-
-b.call({ user: 'Mango' });
+const child = Object.create(parent);
+child.name = 'Jason';
+child.age = 27;
+console.log(child);
+console.log(parent);
