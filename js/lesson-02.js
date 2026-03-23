@@ -227,8 +227,31 @@ const bear = {
     console.log(this.name);
     console.log(this.name2);
   },
+
+  sayName2() {
+    console.log(this.name);
+    console.log(this.name2);
+  },
 };
 
-bear.sayName;
-const a = bear.sayName;
-a();
+// bear.sayName();
+// const a = bear.sayName;
+// console.log(this);
+// bear.sayName2;
+// const s = bear.sayName2;
+// console.log(s);
+const hotel = {
+  username: 'Resort hotel',
+  showThis() {
+    const foo = () => {
+      console.log('this in foo: ', this);
+    };
+
+    foo();
+    console.log('this in showThis: ', this);
+  },
+};
+
+hotel.showThis();
+// this in foo: {username: 'Resort hotel', showThis: ƒ}
+// this in showThis: {username: 'Resort hotel',showThis: ƒ}
