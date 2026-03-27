@@ -33,3 +33,10 @@ const people = [
 // console.log(peopleF);
 const result = people.some(item => item.age < 20);
 console.log(result);
+
+// Дано масив чисел [2, 4, 6, 8, 10].
+// Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
+
+const numbers1 = [2, 4, 6, 8, 10];
+const result1 = numbers1.every(item => item % 2 === 0);
+console.log(result1);
