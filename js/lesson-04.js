@@ -143,3 +143,21 @@ form.addEventListener('submit', onSubmit);
 function onSubmit(event) {
   event.preventDefault();
 }
+
+function createMarkup(cars) {
+  return cars
+    .map(
+      ({ brand, model, price, year, img, description }) =>
+        ` <li><img src="${img}" alt="${description}" width = 500px>
+            <h2>Марка: ${brand}</h2>
+            <h2>Модель: ${model}</h2>
+<p>Ціна: ${price}</p>
+<p>Рік випуску: ${year}</p>
+<p>Опис: ${description}</p>
+
+
+</li>`
+    )
+    .join('');
+}
+list.insertAdjacentHTML('beforeend', createMarkup(cars));
