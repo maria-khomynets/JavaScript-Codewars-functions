@@ -142,6 +142,8 @@ const list = document.querySelector('.cars-list');
 form.addEventListener('submit', onSubmit);
 function onSubmit(event) {
   event.preventDefault();
+  const value = event.target.elements.text.value;
+  console.log(value);
 }
 
 function createMarkup(cars) {
