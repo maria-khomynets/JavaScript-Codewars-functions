@@ -7,11 +7,30 @@
   </head>
   <body>
     <header></header>
-    <h1>This is an example project</h1>
+    <div class="container">
+      <h1 class="title">Каталог автомобілів</h1>
+
+      <!-- Фільтри -->
+      <div class="filters">
+        <!-- Select по марці -->
+        <select id="brand-select" class="select">
+          <option value="all">Усі марки</option>
+        </select>
+
+        <!-- Select по моделі -->
+        <select id="model-select" class="select">
+          <option value="all">Усі моделі</option>
+        </select>
+      </div>
+
+      <!-- Список авто -->
+      <ul class="cars-list"></ul>
+    </div>
     <script type="module" src="./js/task.js"></script>
     <script type="module" src="./js/task-2.js"></script>
     <script type="module" src="./js/lesson-01.js"></script>
     <script type="module" src="./js/lesson-02.js"></script>
     <script type="module" src="./js/lesson-03.js"></script>
+    <script type="module" src="./js/lesson-04.js"></script>
   </body>
 </html>
