@@ -135,3 +135,11 @@ const cars = [
     img: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89',
   },
 ];
+const form = document.querySelector('.search-form');
+const btn = document.querySelector('.search-btn');
+const list = document.querySelector('.cars-list');
+
+form.addEventListener('submit', onSubmit);
+function onSubmit(event) {
+  event.preventDefault();
+}

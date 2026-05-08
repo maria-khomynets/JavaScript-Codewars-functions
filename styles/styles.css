@@ -1,0 +1,52 @@
+.search-form {
+  display: flex;
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 250px;
+
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+.search-select {
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: blue;
+  color: white;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+}
+
+/* ХОВЕР */
+.search-btn:hover {
+  background-color: darkblue;
+  transform: scale(1.05);
+}
+
+/* Активний стан (коли натискаєш) */
+.search-btn:active {
+  transform: scale(0.98);
+}

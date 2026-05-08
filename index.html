@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Blended</title>
   </head>
   <body>
@@ -10,22 +11,31 @@
     <div class="container">
       <h1 class="title">Каталог автомобілів</h1>
 
-      <!-- Фільтри -->
-      <div class="filters">
-        <!-- Select по марці -->
-        <select id="brand-select" class="select">
-          <option value="all">Усі марки</option>
-        </select>
+      <form class="search-form">
 
-        <!-- Select по моделі -->
-        <select id="model-select" class="select">
-          <option value="all">Усі моделі</option>
-        </select>
-      </div>
+  <!-- Інпут -->
+  <input
+    type="text"
+    id="search-input"
+    class="search-input"
+    placeholder="Введіть запит"
+  />
 
-      <!-- Список авто -->
-      <ul class="cars-list"></ul>
-    </div>
+  <!-- Select -->
+  <select id="search-select" class="search-select">
+    <option value="brand">Пошук по марці</option>
+    <option value="model">Пошук по моделі</option>
+  </select>
+
+  <!-- Кнопка -->
+  <button type="submit" class="search-btn">
+    Пошук
+  </button>
+
+</form>
+
+<!-- Список авто -->
+<ul class="cars-list"></ul>
     <script type="module" src="./js/task.js"></script>
     <script type="module" src="./js/task-2.js"></script>
     <script type="module" src="./js/lesson-01.js"></script>
