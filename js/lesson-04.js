@@ -142,12 +142,18 @@ const list = document.querySelector('.cars-list');
 form.addEventListener('submit', onSubmit);
 function onSubmit(event) {
   event.preventDefault();
-  const value = event.target.elements.text.value;
-  console.log(value);
+  const form = event.currentTarget;
+  console.dir(form);
+  const { text, select } = form.elements;
+  const searchCars = cars.filter(
+    item => item[select.value].toLowerCase() === text.value.toLowerCase()
+  );
+  console.log(searchCars);
+  list.innerHTML = createMarkup(searchCars);
 }
 
-function createMarkup(cars) {
-  return cars
+function createMarkup(arr) {
+  return arr
     .map(
       ({ brand, model, price, year, img, description }) =>
         ` <li><img src="${img}" alt="${description}" width = 500px>
