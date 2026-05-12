@@ -125,15 +125,6 @@ const cars = [
     description: 'Преміальний кросовер з високим рівнем комфорту.',
     img: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b',
   },
-  {
-    id: 15,
-    brand: 'Tesla',
-    model: 'Model 3',
-    price: 42000,
-    year: 2022,
-    description: 'Електромобіль з сучасними технологіями.',
-    img: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89',
-  },
 ];
 const form = document.querySelector('.search-form');
 const btn = document.querySelector('.search-btn');
